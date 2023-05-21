@@ -1,0 +1,175 @@
+nav{
+    z-index: 100;
+}
+
+.IMGLOGO{
+    width: 50px;
+    height: 50px;
+}
+
+.modal{
+    margin-top: 100px;
+}
+
+.carousel-control-prev , .carousel-control-next{
+    height: 350px;
+}
+
+
+.modal-body img{
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.btnc{
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (min-width: 600px) {
+    .crads-wrapper {
+        display: flex;
+    }
+
+    .card {
+        margin: 60px;
+        width: calc(100%/4);
+        box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card:not(:first-child) {
+        display: none;
+    }
+}
+
+
+
+/*--------------------------------------- product page --------------------------------------------*/
+.shop-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 50px;
+}
+
+.product-box{
+    position: relative;
+}
+
+.product-box:hover{
+    padding: 12px;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.314);
+    transition: 0.4s;
+}
+
+.cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    height: 100vh;
+    overflow: scroll; 
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    transition: 0.3s;
+  }
+  
+
+.cart.active{
+    right: 0;
+}
+
+.add-cart{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.add-cart:hover{
+    padding: 10px;
+    box-shadow: 5px 5px 5px 0 rgb(245, 136, 136);
+    transition: 0.4s;
+}
+
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cart-img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.cart-img-pay{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-top: 15px;
+}
+
+.detail-box{
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.cart-quantity{
+    border: 1px solid rgb(0, 0, 0);
+    width: 70px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.cart-remove{
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#close-cart{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+/*--------------------------------------- Payment page --------------------------------------------*/
+
+
+.submit-btn{
+    width: 100%;
+    padding:12px;
+    font-size: 17px;
+    color:#fff;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+.inputBox{
+    margin:15px 0;
+}
+
+span{
+    margin-bottom: 5px;
+    display: block;
+  }
+
+
+  input{
+    width: 100%;
+    border:1px solid #ccc;
+    padding:10px 15px;
+    font-size: 15px;
+    text-transform: none;
+  }
