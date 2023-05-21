@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="IMGLOGO"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Products.html">Products</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Contant
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">FaceBook</a></li>
+                            <li><a class="dropdown-item" href="#">Instagram</a></li>
+                            <li><a class="dropdown-item" href="#">Line</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Tel.(+66)881234567</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search"
+                        id="search-input">
+                    <button class="btn btn-dark" type="submit" onclick="searchProducts()">Search</button>
+                </form>
+                <button class="btn btn-outline-dark ms-2"><i class="bi bi-cart2" id="cart-icon"></i></button>
+
+
+                <div class="cart">
+                    <h2 class="cart-title text-center ">My Cart</h2>
+                    <div class="cart-content">
+
+                    </div>
+
+                    <!-- total -->
+                    <div class="total d-flex justify-content-end border-top border-danger mt-4">
+                        <div class="total-title me-2 fw-bold">Total</div>
+                        <div class="total-price">0TH</div>
+                    </div>
+
+                    <!-- Buy BTN -->
+                    <div class="d-flex justify-content-center">
+                        <a href="Checkout.html"><button type="button" class="btn btn-danger btn-buy">Buy
+                                Now</button></a>
+                    </div>
+
+                    <!-- Cart Close -->
+                    <i class="bi bi-x me-2 close-cart fs-2" id="close-cart"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+        <form action="">
+
+            <div class="row">
+
+                <div class="col mt-5">
+
+                    <h3 class="title">Billing Address</h3>
+
+                    <div class="inputBox">
+                        <span>Full Name :</span>
+                        <input type="text" placeholder="Firstname & Lastname">
+                    </div>
+                    <div class="inputBox">
+                        <span>Email :</span>
+                        <input type="email" placeholder="Haiyaa123@gmail.com">
+                    </div>
+                    <div class="inputBox">
+                        <span>Address :</span>
+                        <input type="text" placeholder="room - street - locality">
+                    </div>
+                    <div class="inputBox">
+                        <span>city :</span>
+                        <input type="text" placeholder="Bangkok">
+                    </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>Country :</span>
+                            <input type="text" placeholder="Thailand">
+                        </div>
+                        <div class="inputBox">
+                            <span>Zip Code :</span>
+                            <input type="text" placeholder="10000">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col mt-5">
+
+                    <h3 class="title">Payment</h3>
+
+                    <div class="inputBox">
+                        <span>Cards Accepted :</span>
+                        <img src="img/card_img.png">
+                    </div>
+                    <div class="inputBox">
+                        <span>Name On Card :</span>
+                        <input type="text" placeholder="Mr.Jdai jaide">
+                    </div>
+                    <div class="inputBox">
+                        <span>Credit Card Number :</span>
+                        <input type="number" placeholder="1111-2222-3333-4444">
+                    </div>
+                    <div class="inputBox">
+                        <span>Exp Month :</span>
+                        <input type="text" placeholder="january">
+                    </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>Exp Year :</span>
+                            <input type="number" placeholder="2023">
+                        </div>
+                        <div class="inputBox">
+                            <span>CVV :</span>
+                            <input type="text" placeholder="1234">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button type="submit" class="submit-btn btn btn-success">Proceed To Checkout</button>
+
+        </form>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
