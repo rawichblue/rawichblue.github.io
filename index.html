@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="IMGLOGO"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Products.html">Products</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Contant
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">FaceBook</a></li>
+                            <li><a class="dropdown-item" href="#">Instagram</a></li>
+                            <li><a class="dropdown-item" href="#">Line</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Tel.(+66)881234567</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search"
+                        id="search-input">
+                    <button class="btn btn-dark" type="submit" onclick="searchProducts()">Search</button>
+                </form>
+                <button class="btn btn-outline-dark ms-2"><i class="bi bi-cart2" id="cart-icon"></i></button>
+
+
+                <div class="cart">
+                    <h2 class="cart-title text-center ">My Cart</h2>
+                    <div class="cart-content">
+
+                    </div>
+
+                    <!-- total -->
+                    <div class="total d-flex justify-content-end border-top border-danger mt-4">
+                        <div class="total-title me-2 fw-bold">Total</div>
+                        <div class="total-price">0TH</div>
+                    </div>
+
+                    <!-- Buy BTN -->
+                    <div class="d-flex justify-content-center">
+                        <a href="Checkout.html"><button type="button" class="btn btn-danger btn-buy">Buy
+                                Now</button></a>
+                    </div>
+
+                    <!-- Cart Close -->
+                    <i class="bi bi-x me-2 close-cart fs-2" id="close-cart"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!--advert & banner -->
+    <div class="container-fluid col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+
+            <div class="col-lg-5 text-lg-start">
+                <h1 class="fw-bold text-center">Lo plus :
+                    สารพัดของกุ๊กกิ๊ก
+                </h1>
+                <p class="col-lg-10 fs-4 text-center">
+                    ร้านอุปกรณ์มือถือ สมาร์ทโฟนทุกรุ่น รวมสินค้าใช้ดี ราคาโดนใจ ไม่ว่าจะเป็นสายชาร์จทุกชนิดอาทิเช่น Type
+                    C / I Phone / Android
+                    และอุปกรณ์เสริมต่างๆอย่าง Adaptor / Power Bank และอื่นๆอีกมากมาย สั่งสินค้าออนไลน์ที่นี่
+                    ส่งฟรีทุกออเดอร์!
+                </p>
+            </div>
+
+            <div class="col-md-7 mx-auto col-lg-5 lg">
+                <img src="img/Promotion.jpg" class="w-100">
+                <div class="p-3 m-2"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid text-center mt-1">
+        <h1>Best Seller🔥</h1>
+    </div>
+
+    <!--Best Sell & card -->
+    <div class="content">
+        <div id="carouselExample" class="carousel carousel-dark slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="crads-wrapper">
+
+                        <!-- box 1 -->
+                        <div class="card">
+                            <div class="p-3 m-2">
+                                <img src="img/X2 Plus.jpg" class="product-img w-100">
+                                <h2 class="product-title fs-3">HOCO X2 Plus</h2>
+                                <span class="price">209TH</span>
+                                <p class="mt-3 p-2">ชาร์จเร็ว Hoco X2 Plus King Kong สายชาร์จ Type-C, MicroUSB quick charge</p>
+                                <i class="bi bi-cart2 add-cart" onclick="saveinfo()"></i>
+                            </div>
+                        </div>
+
+                        <!-- box 2 -->
+                        <div class="card">
+                            
+                            <div class="p-3 m-2">
+                                <img src="img/EE-01.jpg" class="product-img w-100">
+                                <h2 class="product-title fs-3">ENYX EE-01</h2>
+                                <span class="price">275TH</span>
+                                <p>หูฟัง สมาร์ทโฟน อีนิกซ์ แท้ สินค้าคุณภาพ พรีเมียม
+                                    เหมาะกับการใช้งานในชีวิตประจำวัน ครบทุกย่านเสียง ชัดเจน นุ่มนวล</p>
+                                <i class="bi bi-cart2 add-cart" onclick="saveinfo()"></i>
+                            </div>
+                        </div>
+
+                        <!-- box 3 -->
+                        <div class="card">
+                            <div class="p-3 m-2">
+                                <img src="img/X14 Plus.jpg" class="product-img  w-100">
+                                <h2 class="product-title fs-3">HOCO X14 Plus</h2>
+                                <span class="price">209TH</span>
+                                <p>hoco x14 plus wu kong สายถัก 1 เมตร รุ่นใหม่ ลายถักสลับสี ชาร์จได้ไวขึ้น
+                                    30%</p>
+                                <i class="bi bi-cart2 add-cart" onclick="saveinfo()"></i>
+                            </div>
+
+                        </div>
+
+                        <!-- box 4 -->
+                        <div class="card">
+                            <div class="p-3 m-2">
+                                <img src="img/B12L.jpg" class="product-img w-100">
+                                <h2 class="product-title fs-3">HOCO POWER BANK B12L Plus</h2>
+                                <span class="price">209TH</span>
+                                <p>แบตสำรอง B12L Plus ความจุ 13000mAh ดีไซน์สีสรรสวยงาม อายุการใช้งาน : 500
+                                    ครั้ง</p>
+                                <i class="bi bi-cart2 add-cart" onclick="saveinfo()"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="carousel-item">
+                    <div class="crads-wrapper">
+
+                        <!-- box 5 -->
+                        <div class="card"">
+                            <div class="p-3 m-2">
+                                <img src=" img/J11 Plus.jpg" class="product-img w-100">
+                                <h2 class="product-title fs-3">HOCO POWER BANK J11 Plus</h2>
+                                <span class="price">995TH</span>
+                                <p>แบตสำรองชาร์จไร้สาย Hoco J11 Plus ความจุ 12000mAh ชาร์จพร้อมกันได้ 3
+                                    เครื่อง</p>
+                                <i class="bi bi-cart2 add-cart" onclick="saveinfo()"></i>
+                            </div>
+                        </div>
+
+                        <!-- box 6 -->
+                        <div class="card">
+                            <div class="p-3 m-2">
+                                <img src="img/610D.jpg" class="product-img w-100">
+                                <h2 class="product-title fs-3">HOCO In Ear 610D</h2>
+                                <span class="price">400TH</span>
+                                <p>หูฟังแบบ In-Ear เหมาะสำหรับการฟังเพลง ดูภาพยนตร์ ออกกำลังกาย
+                                    มาพร้อมไมโครโฟนบนตัวสาย ใช้งานได้ทั้งระบบ iOS และ Android</p>
+                                <i class="bi bi-cart2 add-cart" onclick="saveinfo()"></i>
+                            </div>
+                        </div>
+
+                        <!-- box 7 -->
+                        <div class=" card">
+                            <div class="p-3 m-2">
+                                <img src="img/M34.jpg" class="product-img w-100">
+                                <h2 class="product-title fs-3">HOCO In Ear M34</h2>
+                                <span class="price">275TH</span>
+                                <p>หูฟัง รุ่น M34 Jack แบบ 3.5mm Plug and Play สามารถเสียบแล้วใช้งานได้เลย
+                                    มีปุ่ม รับสายวางสาย สะดวกในการควบคุมการใช้งาน</p>
+                                <i class="bi bi-cart2 add-cart" onclick="saveinfo()"></i>
+                            </div>
+                        </div>
+
+                        <!-- box 8 -->
+                        <div class=" card">
+                            <div class="p-3 m-2">
+                                <img src="img/M71.jpg" class="product-img w-100">
+                                <h2 class="product-title fs-3">HOCO In Ear M71</h2>
+                                <span class="price">328TH</span>
+                                <p>หูฟัง รุ่น M71 หัวแบบ 3.5 วัสดุสายเป็น TPE High Elastic
+                                    ที่มีความยืดหยุ่นสูงม้วนเก็บได้ง่าย มีไมค์ในตัว</p>
+                                <i class="bi bi-cart2 add-cart" onclick="saveinfo()"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <button class=" carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
