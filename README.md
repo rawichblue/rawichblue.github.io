@@ -1,4 +1,4 @@
-# Build an E-commerce website with HTML, CSS, Javascript, bootstrap5 !
+# Build an E-commerce website with HTML, CSS, Javascript, Bootstrap 5
 This project is developed using **HTML**, **CSS,** and **JavaScript**. It is a responsive e-commerce website that allows users to search for products and place orders. The main functionality is implemented using JavaScript.
 
 
