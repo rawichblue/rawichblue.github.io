@@ -31,5 +31,5 @@ This project is developed using **HTML**, **CSS,** and **JavaScript**. It is a r
 
  3. **Create Javascript file**
  
-	  - Create app.js
+	  - **Create app.js**
 		  - Set conditions, calculate, evaluate, create all functions on this page.
