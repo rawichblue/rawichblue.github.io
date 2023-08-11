@@ -38,7 +38,7 @@ function ready() {
         input.addEventListener("change", quantityChanged);
     }
 
-    //Addd to Cart
+    //Add to Cart
     let addCart = document.getElementsByClassName("add-cart")
     for (let i = 0; i < addCart.length; i++) {
         let button = addCart[i];
@@ -101,21 +101,21 @@ function addProductToCart(title, price, productImg) {
     let cartItems = document.getElementsByClassName("cart-content")[0];
     let cartItemsNames = cartItems.getElementsByClassName("cart-product-title");
     for (let i = 0; i < cartItemsNames.length; i++) {
-      let cartItemName = cartItemsNames[i].innerText;
-      if (cartItemName === title) {
-        let quantityElement = cartItems.getElementsByClassName("cart-quantity")[i];
-        let currentQuantity = parseInt(quantityElement.value);
-        let newQuantity = currentQuantity + 1;
-        quantityElement.value = newQuantity;
-        updatetotal();
-        return; 
-      }
+        let cartItemName = cartItemsNames[i].innerText;
+        if (cartItemName === title) {
+            let quantityElement = cartItems.getElementsByClassName("cart-quantity")[i];
+            let currentQuantity = parseInt(quantityElement.value);
+            let newQuantity = currentQuantity + 1;
+            quantityElement.value = newQuantity;
+            updatetotal();
+            return;
+        }
     }
 
     // CreateMyCart
     let cartShopBox = document.createElement("div");
     cartShopBox.classList.add("cart-box");
-  
+
     let cartBoxContent = `
       <img src="${productImg}" class="cart-img w-100">
       <div class="detail-box">
@@ -124,19 +124,19 @@ function addProductToCart(title, price, productImg) {
           <input type="number" value="1" class="cart-quantity">
       </div>
       <i class="bi bi-trash-fill text-danger cart-remove"></i>`;
-  
+
     //add product to Mycart
     cartShopBox.innerHTML = cartBoxContent;
     cartItems.append(cartShopBox);
-  
+
     cartShopBox
-      .getElementsByClassName("cart-remove")[0]
-      .addEventListener("click", removeCartItem);
-  
+        .getElementsByClassName("cart-remove")[0]
+        .addEventListener("click", removeCartItem);
+
     cartShopBox
-      .getElementsByClassName("cart-quantity")[0]
-      .addEventListener("change", quantityChanged);
-  
+        .getElementsByClassName("cart-quantity")[0]
+        .addEventListener("change", quantityChanged);
+
     updatetotal();
 }
 
@@ -167,7 +167,7 @@ function updatetotal() {
 //comma
 function numberWithCommas(x) {
     x = x.toString();
-    var pattern = /(-?\d+)(\d{3})/;
+    let pattern = /(-?\d+)(\d{3})/;
     while (pattern.test(x))
         x = x.replace(pattern, "$1,$2");
     return x;
@@ -175,20 +175,9 @@ function numberWithCommas(x) {
 
 
 //AlertSwal
-function saveinfo() {
-    validate();
-}
-
-function validate(){
-    let pass = true;
-    let AlertSwal = document.getElementsByClassName("product-title")[0];
-
-    if(AlertSwal || AlertSwal.innerText.length <= 0) {
-        pass = false;
-        Swal.fire({
-            icon: "success",
-            title: "success",
-        });
-    }
-    return pass;
+function AlertSwal() {
+    Swal.fire({
+        icon: "success",
+        title: "success",
+    });
 }
